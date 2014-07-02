@@ -52,14 +52,15 @@ public class HeroiTest {
 		// Limpa o conteúdo do stream
 		outContent.reset();
 		
-		// com poção de velocidade ativa;
+//		 com poção de velocidade ativa;
 		this.heroi.setPosicao(0);
 		this.heroi.tomarPocaoVelocidade();
+		assertEquals("O heroi "+ this.heroi.getNome() + " tomou uma poção de velocidade.\n", outContent.toString());
+		outContent.reset();
 		this.heroi.caminha();
 		assertEquals(30, this.heroi.getPosicao());
 		assertEquals("O heroi " + this.heroi.getNome() + " caminhou.\n",
 				outContent.toString());
-
 	}
 
 	@Test
@@ -67,30 +68,50 @@ public class HeroiTest {
 		assertEquals(0, this.heroi.getPosicao());
 		this.heroi.corre();
 		assertEquals(150, this.heroi.getPosicao());
-
-		// com poção de velocidade ativa;
+		assertEquals("O heroi " + this.heroi.getNome() + " correu.\n",
+				outContent.toString());
+		
+		// Limpa o conteúdo do stream
+		outContent.reset();
+//
+//		// com poção de velocidade ativa;
 		this.heroi.setPosicao(0);
 		this.heroi.tomarPocaoVelocidade();
 		this.heroi.corre();
 		assertEquals(300, this.heroi.getPosicao());
+		assertEquals("O heroi "+ this.heroi.getNome() + " tomou uma poção de velocidade.\nO heroi " + this.heroi.getNome() + " correu.\n",
+				outContent.toString());
 	}
-
+//
 	@Test
 	public void testAtaca() {
 		assertEquals(50, this.inimigo.getVida());
 
 		heroi.ataca(inimigo);
 		assertEquals(47, this.inimigo.getVida());
+		assertEquals("O heroi "+ this.heroi.getNome() +" atacou ("+ this.heroi.getAtaque() +") "
+				+ "o heroi " + this.inimigo.getNome() + " ("+this.inimigo.getDefesa()+") e "
+				+ "o mesmo recebeu "+ 3 +" de dano, "
+				+ "ficando com "+ this.inimigo.getVida() +".\n", outContent.toString());
+		
+		// Limpa o conteúdo do stream
+		outContent.reset();
 
 		inimigo.ataca(heroi);
 		assertEquals(99, this.heroi.getVida());
+		assertEquals("O heroi "+ this.inimigo.getNome() +" atacou ("+ this.inimigo.getAtaque() +") "
+				+ "o heroi " + this.heroi.getNome() + " ("+this.heroi.getDefesa()+") e "
+				+ "o mesmo recebeu "+ -25 +" de dano, "
+				+ "ficando com "+ this.heroi.getVida() +".\n", outContent.toString());
 	}
-
+//
 	@Test
 	public void testTomarPocaoVida() {
 		assertEquals(100, this.heroi.getVida());
 		heroi.tomarPocaoVida();
 		assertEquals(110, this.heroi.getVida());
+		assertEquals("O heroi "+this.heroi.getNome()+" tomou uma poção de vida e "
+				+ "agora está com "+110+" pontos de vida.\n", outContent.toString());
 	}
 
 }
