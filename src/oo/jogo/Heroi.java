@@ -2,34 +2,67 @@ package oo.jogo;
 
 public class Heroi {
 	private String nome;
-	private int posicao, vida;
+	private Posicao posicao;
+	private int vida;
 	private double ataque, defesa;
 	private boolean superVelocidade;
 
-	public Heroi(String nome, int posicao, int vida, double ataque,
+	public Heroi(String nome, Posicao posicao, int vida, double ataque,
 			double defesa) {
-		this.nome = nome;
-		this.posicao = posicao;
-		this.vida = vida;
-		this.ataque = ataque;
-		this.defesa = defesa;
-
-		// Ou
-		// setNome(nome);
-		// setPosicao(posicao);
-		// setVida(vida);
-		// setAtaque(ataque);
-		// setDefesa(defesa);
+		
+		 setNome(nome);
+		 setPosicao(posicao);
+		 setVida(vida);
+		 setAtaque(ataque);
+		 setDefesa(defesa);
+	}
+	
+	public Heroi(String nome, int x, int y, int vida, double ataque,
+			double defesa) {
+		
+		 setNome(nome);
+		 setPosicao(new Posicao(x, y));
+		 setVida(vida);
+		 setAtaque(ataque);
+		 setDefesa(defesa);
 	}
 
-	public void caminha() {
-		setPosicao(getPosicao() + (isSuperVelocidade() ? 30 : 15));
+	public void caminha(String direcao) {
+		switch(direcao) {
+		case "cima":
+			posicao.moverCima((isSuperVelocidade() ? 30 : 15));
+			break;
+		case "baixo":
+			posicao.moverBaixo((isSuperVelocidade() ? 30 : 15));
+			break;
+		case "esquerda":
+			posicao.moverEsquerda((isSuperVelocidade() ? 30 : 15));
+			break;
+		case "direita":
+			posicao.moverDireita((isSuperVelocidade() ? 30 : 15));
+			break;
+		}
+		
 		setSuperVelocidade(false);
 		System.out.printf("O heroi %s caminhou.\n", getNome());
 	}
 
-	public void corre() {
-		setPosicao(getPosicao() + (isSuperVelocidade() ? 300 : 150));
+	public void corre(String direcao) {
+		switch(direcao) {
+		case "cima":
+			posicao.moverCima((isSuperVelocidade() ? 300 : 150));
+			break;
+		case "baixo":
+			posicao.moverBaixo((isSuperVelocidade() ? 300 : 150));
+			break;
+		case "esquerda":
+			posicao.moverEsquerda((isSuperVelocidade() ? 300 : 150));
+			break;
+		case "direita":
+			posicao.moverDireita((isSuperVelocidade() ? 300 : 150));
+			break;
+		}
+		
 		setSuperVelocidade(false);
 		System.out.printf("O heroi %s correu.\n", getNome());
 	}
@@ -86,11 +119,11 @@ public class Heroi {
 		this.nome = nome;
 	}
 
-	public int getPosicao() {
+	public Posicao getPosicao() {
 		return posicao;
 	}
 
-	public void setPosicao(int posicao) {
+	public void setPosicao(Posicao posicao) {
 		this.posicao = posicao;
 	}
 
