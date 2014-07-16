@@ -12,6 +12,10 @@ import java.util.Random;
  * Os obstáculos devem ser gerados assim que o mapa for construído. 
  * Não podendo haver um obstáculo do lado do outro.
  * 
+ * Crie também um método público toString que retorna uma String
+ * esse método deve imprimir . (ponto) para localizações com zero,
+ * e 0 (zero) para locais com obstáculos.
+ * 
  */
 public class Mapa {
 	private int[][] dimensao;
