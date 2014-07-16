@@ -61,12 +61,26 @@ public class Mapa {
 	}
 	
 	public String toString() {
-		String str = "Dimensão: [" + this.dimensao.length + 
-				", " + dimensao[0].length + "]\n";
+		String str = "";
 		
-		str += "Obstáculos:\n\n";
-		for(int[] o : this.obstaculos) {
-			str += "[" + o[0] + ", " + o[1]+ "]\n";
+		for(int i = 0; i < this.dimensao.length; i++) {
+			for(int j = 0; j < this.dimensao[0].length; j++) {
+				boolean obstaculo = false;
+				
+				for(int w = 0; w < this.obstaculos.length; w++) {
+					if(this.obstaculos[w][0] == i && 
+							this.obstaculos[w][1] == j) {
+						obstaculo = true;
+					}
+				}
+				
+				if(obstaculo){	
+					str += "0";
+				} else {
+					str += ".";
+				}	
+			}
+			str += "\n";
 		}
 		
 		return str;
