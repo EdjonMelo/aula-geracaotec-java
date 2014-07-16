@@ -1,5 +1,7 @@
 package oo.jogo;
 
+import java.util.Random;
+
 /*
  * O Mapa possui 2 atributos:
  * - Dimensão é uma matriz de tamanho definido durante a construção da 
@@ -17,11 +19,65 @@ public class Mapa {
 	
 	public Mapa(int largura, int altura, int numObstaculos) {
 		this.dimensao = new int[largura][altura];
-		gerarObstaculos(numObstaculos);
-	}
-	
-	private void gerarObstaculos(int numObstaculos) {
 		this.obstaculos = new int[numObstaculos][2];
 		// .... gerar
+		Random gerador = new Random();
+		
+		int percorridos = 0;
+		while(percorridos < numObstaculos) {	
+			int x = gerador.nextInt(largura);
+			int y = gerador.nextInt(altura);
+			
+			if(obstaculoValido(x, y)) {
+				this.obstaculos[percorridos][0] = x;
+				this.obstaculos[percorridos][1] = y;
+				percorridos++;
+			}
+		}
 	}
+	
+	private boolean obstaculoValido(int x, int y) {
+		int[][] comparacoes = {{0, 0}, {-1,-1}, {-1, 1}, {1, -1}, {1,1},
+				               {0, 1}, {0, -1}, {1, 0}, {-1, 0}};
+		
+		for(int i = 0; i < this.obstaculos.length; i++) {
+			for(int j = 0; j < comparacoes.length; j++) {
+				if(j == 0 && x == 0 && y == 0) {
+					continue;
+				}
+				
+				if(obstaculos[i][0] == (comparacoes[j][0] + x) &&
+						obstaculos[i][1] == (comparacoes[j][1] + y)) {
+					return false;
+				}
+			}
+		}
+		
+		return true;
+	}
+	
+	public String toString() {
+		String str = "Dimensão: [" + this.dimensao.length + 
+				", " + dimensao[0].length + "]\n";
+		
+		str += "Obstáculos:\n\n";
+		for(int[] o : this.obstaculos) {
+			str += "[" + o[0] + ", " + o[1]+ "]\n";
+		}
+		
+		return str;
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 }
