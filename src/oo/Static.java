@@ -1,20 +1,25 @@
 package oo;
 
 public class Static {
-	private static int numeroObjetos;
-	private static int contador;
-	private static final int VALOR_CONSTANTE = 10;
+	public static int numeroObjetos;
+	public int contador;
+	public static final int VALOR_CONSTANTE = 10;
 	
 	public Static() {
 		numeroObjetos++;
 	}
 	
-	public void contarParaTodos() {
+	public void addNumObjetos() {
+		numeroObjetos++;
+	}
+	
+	public void addContador() {
 		contador++;
 	}
 	
-	public static void contarParaTodosIgual() {
-		contador++;
+	public static int addConstante(int num) {
+		return VALOR_CONSTANTE + num;
+		
 	}
 	
 //	public void setValor(int valor) {
