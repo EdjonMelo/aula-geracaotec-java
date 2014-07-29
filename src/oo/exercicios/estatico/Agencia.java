@@ -18,7 +18,9 @@ public class Agencia {
 		contas.remove(index);
 	}
 	
-	/* 1 - Encontrem uma conta pelo número identificador da conta. 
+	/* Criem métodos da agecia que:
+	 * 
+	 * 1 - Encontrem uma conta pelo número identificador da conta. 
 	 * E a retornem (conta).
 	 * 
 	 * 2 - Removam uma conta pelo número identificador.
