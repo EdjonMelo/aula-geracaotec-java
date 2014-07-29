@@ -1,0 +1,41 @@
+// Adicione os atributos privados e complete os métodos:
+
+public class Ingrediente { 
+   public Ingrediente(String nome, float quantidade);  // Construtor
+   public String getNome();  // Retorna o nome
+   public float getQuantidade(); // Retorna a quantidade
+   // Retorna um string no formato "ingrediente (quantidade)"    
+   // Por exemplo: "Farinha (4)"
+   
+   public String toString(); 
+}
+
+public class Receita {
+   public Receita(String nome)  // Construtor 
+   // Retorna uma lista com os ingredientes da receita (lista de
+   // instâncias da classe Ingrediente).
+   
+   public ArrayList ingredientes();
+   // Acrescenta um ingrediente à receita
+   
+   public void adicionaIngrediente(Ingrediente i);
+   // Acrescenta um conjunto de ingredientes à receita
+   
+   public void adicionaIngredientes(ArrayList ingredientes);
+   // Verifica se é possível preparar a receita com um conjunto de ingredientes
+   // Retorna verdadeiro se o conjunto passado como parâmetro contiver todos
+   // os ingredientes necessários para o preparo, em quantidade suficiente.
+   
+   public bool possoPreparar(ArrayList ingredientes);
+   // Retorna um string com todos os ingredientes, um por linha, sendo cada
+   // ingrediente no formato especificado na classe Ingrediente
+   
+   public String toString();
+   // Retorna o nome
+   
+   public String getNome();
+   // Programa main que demonstre todos os métodos implementados
+}
+
+
+// Ref: http://www.aspectos.org/courses/aulasaop/exercicios.html

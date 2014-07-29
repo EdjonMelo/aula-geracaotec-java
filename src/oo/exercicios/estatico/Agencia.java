@@ -3,8 +3,11 @@ package oo.exercicios.estatico;
 import java.util.ArrayList;
 
 public class Agencia {
-//	Conta[] contas;
-	private ArrayList<Conta> contas = new ArrayList<>(40);
+	private ArrayList<Conta> contas;
+	
+	public Agencia() {
+		contas = new ArrayList<>();
+	}
 	
 	public void adicionarConta(Conta conta) {
 		contas.add(conta);
@@ -30,6 +33,37 @@ public class Agencia {
 	 * 4 - Crie um método que cobre a taxa administativa de 
 	 * R$10,00 para cada uma das contas
 	 */
+	
+	public Conta encontrarPeloIdentificador(int id) {
+		for(Conta conta : contas) {
+			if (conta.getIdentificador() == id) {
+				return conta;
+			}
+		}
+		return null;
+	}
+	
+	public void removerPeloIdentificador(int id) {
+		contas.remove(encontrarPeloIdentificador(id));
+	}
+	
+	public Conta encontrarPeloNome(String nome) {
+		for(Conta conta : contas) {
+			if (conta.getNome().equals(nome)) {
+				return conta;
+			}
+		}
+		return null;
+	}
+	
+	
+	public void cobrarTaxas() {
+		for(Conta conta : contas) {
+			conta.debito(10.0);
+		}
+	}
+	
+	
 	
 	
 	public void exemplos() {

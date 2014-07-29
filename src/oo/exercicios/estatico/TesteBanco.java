@@ -1,9 +1,15 @@
 package oo.exercicios.estatico;
 
+import java.util.Scanner;
+
 public class TesteBanco {
 
 	public static void main(String[] args) {
-		Conta c1 = new Conta(100, "Nassor");
+		Scanner k = new Scanner(System.in);
+		System.out.print("Digite o limite");
+		double limite = k.nextDouble();
+		
+		Conta c1 = new Conta(limite, "Nassor");
 		c1.debito(1000);
 		c1.debito(90);
 		
