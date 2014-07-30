@@ -15,7 +15,7 @@ public class Receita {
     
    // Retorna uma lista com os ingredientes da receita (lista de
    // instâncias da classe Ingrediente).
-   public ArrayList ingredientes();
+   public ArrayList ingredientes()
    
    // Acrescenta um ingrediente à receita
    public void adicionaIngrediente(Ingrediente i);
