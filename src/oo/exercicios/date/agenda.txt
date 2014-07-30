@@ -1,0 +1,16 @@
+Desenvolva uma aplicativo de agenda.
+
+1 - Uma agenda possui uma série de compromissos;
+
+2 - Cada agenda é uma lista de compromissos;
+
+3 - Cada compromisso possui: uma data de início, um título e uma descrição;
+
+4 - A agenda não suporta dois compromissos dentro do mesmo dia;
+
+5 - A agenda tem um método que imprime todos os compromissos de um 
+mês específico a partir do número do mês;
+
+6 - Cada compromisso sabe se imprimir [toString()]
+
+Crie um classe chamada TestarAgenda para testar as funcionalidades da agenda
