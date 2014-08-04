@@ -1,0 +1,8 @@
+- Crie uma classe que possui uma lista das datas comemorativas do mês de Novembro no Brasil (https://pt.wikipedia.org/wiki/Novembro) e imprima cada uma dessas datas no console.
+
+- Entre os anos de 1400 e 2090, adicione todos os anos bissextos em uma lista chamada anosBissextos e depois imprima todos os valores desta lista. (Utilize um objeto do tipo GregorianCalendar para realizar esta verificação)
+
+- Receba um data no teclado no formato dia/mes/ano e imprima no formato ano-mes-dia
+
+
+
