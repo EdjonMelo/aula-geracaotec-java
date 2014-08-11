@@ -3,13 +3,13 @@ package oo.exercicios.util;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
-import java.util.Date;
+import java.util.GregorianCalendar;
 
 public class DataMundoReal {
 	public static boolean diferencaAnos(String comparador, String aComparar, int limiteAnos) throws ParseException {
 		// Definindo quanto tempo tem a diferença em anos
-		Calendar dtComparador = Calendar.getInstance();
-		Calendar dtAComparar = Calendar.getInstance();
+		Calendar dtComparador = new GregorianCalendar();
+		Calendar dtAComparar = new GregorianCalendar();
 		
 		// Criando um formatador de datas no formato padrão brasileiro
 		SimpleDateFormat df = new SimpleDateFormat("dd/MM/yyyy");

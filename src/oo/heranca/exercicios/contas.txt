@@ -1,0 +1,7 @@
+Pegue a o exercício oo.exercicios.estatico.Conta, e crie duas contas 
+Conta Corrente e Conta Poupança.
+
+A Conta Corrente possui uma taxa mensal que inicia em 9 reais ao mês. Mas
+pode ser alterada no construtor.
+
+A Conta Poupança possui um rendimento mensal: 0.56%

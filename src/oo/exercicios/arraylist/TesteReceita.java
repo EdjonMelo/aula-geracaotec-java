@@ -22,7 +22,6 @@ public class TesteReceita {
 		
 		System.out.println(bolo.possoPreparar(dispensa) ? "Pronto" : "Não dá para fazer");
 		
-		
 	}
 
 }
