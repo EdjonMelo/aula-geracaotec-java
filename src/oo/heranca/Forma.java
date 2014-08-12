@@ -1,7 +1,7 @@
 package oo.heranca;
 
 // Classe "Pai"
-public class Forma {
+public abstract class Forma {
 	private int altura;
 	private int largura;
 	

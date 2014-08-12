@@ -4,6 +4,7 @@ public class FormaFeliz {
 
 	public static void main(String[] args) {
 		
+		
 		Quadrado quad = new Quadrado(40);
 		System.out.println(quad.area());
 		System.out.println(quad.diagonal());
@@ -13,6 +14,7 @@ public class FormaFeliz {
 		System.out.println(rect.area());
 		System.out.println(rect.diagonal());
 		System.out.println(rect.perimetro());
+		
 		
 	}
 
