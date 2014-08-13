@@ -1,4 +1,4 @@
-package oo.arraylist.exercicios;
+package util.arraylist.exercicios;
 
 public class Ingrediente {
 	private String nome;

@@ -1,0 +1,8 @@
+Crie um banco de dados que contem o nome e idade de 5 Pessoas. Estes dados precisam ser 
+capturados a partir do teclado. Cada dados informado precisa ser inserido em um arquivo
+chamado base_pessoas.dat
+
+Após isso crie métodos que:
+- Imprimam todas as Pessoas (nome e idade);
+- Imprima apenas as pessoas maiores de 18 anos;
+- Imprima apenas pessoas que iniciam com uma determinada letra (passada por parametro)
