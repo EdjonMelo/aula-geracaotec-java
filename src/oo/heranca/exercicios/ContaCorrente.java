@@ -1,6 +1,6 @@
 package oo.heranca.exercicios;
 
-import oo.exercicios.estatico.Conta;
+import oo.estatico.exercicios.Conta;
 
 public class ContaCorrente extends Conta {
 	private double taxaMensal;

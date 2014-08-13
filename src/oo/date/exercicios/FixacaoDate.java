@@ -1,4 +1,4 @@
-package oo.exercicios.date;
+package oo.date.exercicios;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;

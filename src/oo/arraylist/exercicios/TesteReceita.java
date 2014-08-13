@@ -1,4 +1,4 @@
-package oo.exercicios.arraylist;
+package oo.arraylist.exercicios;
 
 import java.util.ArrayList;
 

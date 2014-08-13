@@ -1,4 +1,4 @@
-package oo.exercicios.estatico;
+package oo.estatico.exercicios;
 
 /*
  * Desenvolva uma classe com métodos estáticos chamada GerenteDaConta 

@@ -1,4 +1,4 @@
-package oo.exercicios.estatico;
+package oo.estatico.exercicios;
 
 import java.util.Scanner;
 

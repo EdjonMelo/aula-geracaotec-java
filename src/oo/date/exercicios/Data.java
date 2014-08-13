@@ -1,4 +1,4 @@
-package oo.exercicios.util;
+package oo.date.exercicios;
 
 public class Data {
 	public static boolean diferencaAnos(String comparador, String aComparar, int limiteAnos) {
