@@ -1,6 +1,7 @@
 Crie a classe abstrata Polígono, essa classe deve ter o método abstrato getArea;
 
 Crie as classes concretas Triangulo, Quadrado, Retangulo, Pentágono e Hexágono, implemente
-nessas classes os métodos que calculem a área total da forma geométrica regular de todas elas;  
+nessas classes os métodos que calculem a área total da forma geométrica regular de todas 
+elas;  
 
 Algumas implementações podem ser herdadas, evite a repetição de código;

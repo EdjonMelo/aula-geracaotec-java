@@ -3,7 +3,7 @@ package oo.heranca.trabalho;
 public class Triangulo extends Poligono {
 	
 	public double getArea() {
-		return 0;
+		return 0.0;
 	}
 
 }

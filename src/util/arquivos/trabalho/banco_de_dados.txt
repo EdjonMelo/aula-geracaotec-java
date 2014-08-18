@@ -1,5 +1,5 @@
 Crie um banco de dados que contem o nome e idade de 5 Pessoas. Estes dados precisam ser 
-capturados a partir do teclado. Cada dados informado precisa ser inserido em um arquivo
+capturados a partir do teclado. Cada dado informado precisa ser inserido em um arquivo
 chamado base_pessoas.dat
 
 Após isso crie métodos que:

@@ -1,0 +1,69 @@
+MySQL: comandos básicos
+-----------------------
+
+Como conectar ao MySQL
+Conecte-se ao servidor MySQL com o seguinte comando:
+    mysql -h NOME-DO-SERVIDOR -u NOME-DO-USUARIO
+    
+Após dar o comando, o sistema vai pedir a sua senha de usuário.
+Dica: Se você instalou o MySQL no seu próprio PC, pode usar localhost no lugar de 
+NOME-DO-SERVIDOR.
+
+No exemplo, a seguir, veja como se conectar como root:
+    mysql -u root -p
+    
+Se não foi você quem fez a instalação, pode precisar contatar o administrador do banco de 
+dados para saber que valores usar para conectar ao servidor MySQL.
+
+-------------------------
+
+Como criar um banco de dados no MySQL
+
+    CREATE DATABASE nome-do-banco;
+
+Para ver todos os bancos de dados existentes no servidor:
+
+    SHOW DATABASES;
+
+Usando um banco de dados existente:
+
+    USE nome-do-banco;
+    
+-------------------------
+
+Como criar uma tabela no MySQL
+    
+    USE testes; # Defini a tabela a ser utilizada
+    
+    # cria uma tabela clientes
+    CREATE TABLE `clientes` (
+      `id` mediumint(8) unsigned NOT NULL auto_increment,
+      `nomeEmpresa` varchar(255),
+      `nomeDiretor` varchar(255) default NULL,
+      `numEmpregados` mediumint default NULL,
+      PRIMARY KEY (`id`)) AUTO_INCREMENT=1;
+      
+
+Ver as tabelas da base de dados
+    
+    SHOW tables;
+    
+Obter informações da tabela
+
+    DESCRIBE clientes;
+    
+-------------------------
+
+Inserindo dados na base de dados
+
+INSERT INTO `clientes` (`id`,`nomeEmpresa`,`nomeDiretor`,`numEmpregados`) 
+    VALUES (1,"Malesuada Inc.","Johnny Pedd",4847);
+
+INSERT INTO `clientes` (`id`,`nomeEmpresa`,`nomeDiretor`,`numEmpregados`) 
+    VALUES (2,"Aliquam Inc.","Al Capino",4135);
+
+-------------------------
+
+Fazendo consulta em todos os dados
+
+SELECT * FROM clientes

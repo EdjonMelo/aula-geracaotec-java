@@ -22,7 +22,6 @@ public class EscreveArquivo {
 			bw.write("Super luper hiper liper pulo do tigrão");
 			bw.close();
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 

@@ -2,28 +2,27 @@ Realizar cálculos de Folha de Pagamento (FP) baseados nos tipos de empregados d
 empresa. Utilizar polimorfismo com classes abstratas e métodos abstratos.
 
 Interface de implementação: utilizar uma superclasse abstract Empregado. Esta 
-classe possui dentre os seus métodos um método abstrato chamado calcularGanho
-(visualizar o diagrama simples abaixo). As subclasses de Empregado são: 
+classe possui dentre os seus métodos um método abstrato chamado calcularGanho. 
+As subclasses de Empregado são: 
 
 - Chefe: empregado pago com um salário fixo semanal independente do 
 número de horas trabalhadas. O retorno do método ganho desta classe é o 
-próprio valor atribuído ao atributo salarioMensal, consultar diagrama; 
+próprio valor atribuído ao atributo salarioMensal: 
 
 - TrabalhadorComissionado: empregado pago com um salário fixo mais 
 uma porcentagem sobre as vendas. O retorno do método ganho desta classe é 
-o resultado da operação sobre os valores atribuídos aos atributos (ver 
-diagrama abaixo) desta classe da seguinte forma: salario + (comissao * 
-quantidade); 
+o resultado da operação sobre os valores atribuídos aos atributos
+desta classe da seguinte forma: salario + (comissao * quantidade); 
 
 - TrabalhadorPecaProduzida: empregado pago pelo número de itens 
 produzidos. O retorno do método ganho desta classe é o resultado da 
-operação sobre os valores atribuídos aos atributos (ver diagrama abaixo) 
-desta classe da seguinte forma: remuneracão * quantidade ;
+operação sobre os valores atribuídos aos atributos desta classe da seguinte
+forma: remuneracão * quantidade ;
  
 - TralhadorHora: empregado que é pago por hora e que recebe um adicional 
 por hora extra trabalhada. O retorno do método ganho desta classe é o 
-resultado da operação sobre os valores atribuídos aos atributos (ver diagrama 
-abaixo) desta classe da seguinte forma: salarioHora * horas.
+resultado da operação sobre os valores atribuídos aos atributos
+desta classe da seguinte forma: salarioHora * horas.
  
 A chamada de método ganho pode ser aplica genericamente a todos os tipos de 
 empregados. Mas a maneira como os rendimentos de cada pessoa são calculados 
