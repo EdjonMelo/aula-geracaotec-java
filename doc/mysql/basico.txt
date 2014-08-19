@@ -80,11 +80,14 @@ SELECT nomeEmpresa FROM clientes;
 SELECT id, nomeEmpresa FROM clientes;
 SELECT id, nomeEmpresa FROM clientes WHERE id=2;
 SELECT id, nomeEmpresa FROM clientes WHERE id<>2;
+SELECT * FROM clientes WHERE nomeDiretor LIKE "A%";
 
 
 =================================================
 
 Novamente (com extras)
+
+USE testes;
 
 CREATE TABLE livros (
     livro_id INT, 
@@ -106,7 +109,7 @@ CREATE TABLE autores (
     primeiro_nome  VARCHAR(50),
     ultimo_nome VARCHAR(50),
     pais       VARCHAR(50)
-);
+) AUTO_INCREMENT=1;
 
 SHOW TABLES;
 
@@ -114,3 +117,33 @@ SHOW TABLES;
 # Insira 10 autores;
 
 # Escreva 20 consultas diferentes utilizando estes livros e autores
+
+
+==========================================================
+
+Crie tabelas que reflitam as classes (do GeracaoTec-java):
+[tá lá no GIT]
+- oo.Humano
+- oo.estatico.exercicios.Conta
+- oo.jogo.Heroi (sem utilizar mais de uma tabela)
+
+// Criem 5 inserts para cada uma dessas tabelas;
+// Crie 3 selects específicos para cada uma dessas tabelas
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
