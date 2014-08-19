@@ -1,0 +1,27 @@
+Parte 1: 20/08/2014
+
+Entregar a resposta das seguintes perguntas:
+
+Nome do projeto?
+O que ele faz?
+Quais as tecnologias utilizadas para realizar o projeto?
+Quem são os integrantes (nome e email).
+
+
+===========================================
+
+Parte 2: 27/08/2014
+
+- Licensa definida (aberta ou fechada, escolhemos cada uma na hora
+- Esqueleto do software (principais classes e regras)
+    - atributos e assinaturas dos métodos;
+    - comentários explicando o que faz o que.
+
+===========================================
+
+
++ Nota dos trabalhos x2
++ Entrega dos tabalhos (10, 5, 0)
++ Code academy (javascript ou php ou python ou ruby)
++ Trabalho Final
+/ 5

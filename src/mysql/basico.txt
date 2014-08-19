@@ -20,6 +20,7 @@ dados para saber que valores usar para conectar ao servidor MySQL.
 Como criar um banco de dados no MySQL
 
     CREATE DATABASE nome-do-banco;
+    CREATE DATABASE testes;
 
 Para ver todos os bancos de dados existentes no servidor:
 
@@ -28,6 +29,7 @@ Para ver todos os bancos de dados existentes no servidor:
 Usando um banco de dados existente:
 
     USE nome-do-banco;
+    USE testes;
     
 -------------------------
 
@@ -36,13 +38,14 @@ Como criar uma tabela no MySQL
     USE testes; # Defini a tabela a ser utilizada
     
     # cria uma tabela clientes
-    CREATE TABLE `clientes` (
-      `id` mediumint(8) unsigned NOT NULL auto_increment,
-      `nomeEmpresa` varchar(255),
-      `nomeDiretor` varchar(255) default NULL,
-      `numEmpregados` mediumint default NULL,
-      PRIMARY KEY (`id`)) AUTO_INCREMENT=1;
+    CREATE TABLE clientes (
+      id mediumint(8) unsigned NOT NULL auto_increment,
+      nomeEmpresa varchar(255),
+      nomeDiretor varchar(255) default NULL,
+      numEmpregados mediumint default NULL,
+      PRIMARY KEY (id)) AUTO_INCREMENT=1;
       
+Data Types: https://dev.mysql.com/doc/refman/5.0/en/data-types.html
 
 Ver as tabelas da base de dados
     
@@ -59,11 +62,55 @@ Inserindo dados na base de dados
 INSERT INTO `clientes` (`id`,`nomeEmpresa`,`nomeDiretor`,`numEmpregados`) 
     VALUES (1,"Malesuada Inc.","Johnny Pedd",4847);
 
-INSERT INTO `clientes` (`id`,`nomeEmpresa`,`nomeDiretor`,`numEmpregados`) 
-    VALUES (2,"Aliquam Inc.","Al Capino",4135);
+INSERT INTO `clientes` (`nomeEmpresa`,`nomeDiretor`,`numEmpregados`) 
+    VALUES ("Aliquam Inc.","Al Capino",4135);
+    
+INSERT INTO `clientes` (`nomeEmpresa`) 
+    VALUES ("Geração Tec");
+    
+INSERT INTO `clientes` (`nomeDiretor`,`numEmpregados`) 
+    VALUES ("Al Capino",4135);
 
 -------------------------
 
 Fazendo consulta em todos os dados
 
-SELECT * FROM clientes
+SELECT * FROM clientes;
+SELECT nomeEmpresa FROM clientes;
+SELECT id, nomeEmpresa FROM clientes;
+SELECT id, nomeEmpresa FROM clientes WHERE id=2;
+SELECT id, nomeEmpresa FROM clientes WHERE id<>2;
+
+
+=================================================
+
+Novamente (com extras)
+
+CREATE TABLE livros (
+    livro_id INT, 
+    titulo   VARCHAR(50),
+    autor    VARCHAR(50)
+);
+
+ALTER TABLE livros
+    CHANGE COLUMN livro_id livro_id INT AUTO_INCREMENT PRIMARY KEY,
+    CHANGE COLUMN autor autor_id INT,
+    ADD COLUMN descricao TEXT,
+    ADD COLUMN tipo ENUM('romance','poesia','drama'), 
+    ADD COLUMN editora_id INT,
+    ADD COLUMN ano_publicacao VARCHAR(4),
+    ADD COLUMN isbn VARCHAR(20);
+    
+CREATE TABLE autores (
+    autor_id   INT AUTO_INCREMENT PRIMARY KEY,
+    primeiro_nome  VARCHAR(50),
+    ultimo_nome VARCHAR(50),
+    pais       VARCHAR(50)
+);
+
+SHOW TABLES;
+
+# Insira 10 livros;
+# Insira 10 autores;
+
+# Escreva 20 consultas diferentes utilizando estes livros e autores

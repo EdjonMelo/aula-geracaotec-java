@@ -1,0 +1,4 @@
+No trabalho util.date.trabalho:
+
+Ao cadastar um compromisso com a mesma data, ao invés de uma mensagem é necessário
+gerar um error e tratar no TestaAgenda 

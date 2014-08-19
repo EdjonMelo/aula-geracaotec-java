@@ -39,7 +39,7 @@ public class Conta {
 	}
 	
 	// "throws" afirma que a função ao ser executada pode gerar uma exception
-	// jogano a responsabilidade de tratar a exception para a classe que utilizá-la.
+	// jogando a responsabilidade de tratar a exception para a classe que irá utilizá-la.
 	public void debito(double valor) throws Exception {
 		if( (this.saldo + limite) >= valor) {
 			this.saldo -= valor;
