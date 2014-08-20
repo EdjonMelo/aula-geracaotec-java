@@ -123,6 +123,7 @@ SHOW TABLES;
 
 Crie tabelas que reflitam as classes (do GeracaoTec-java):
 [tá lá no GIT]
+
 - oo.Humano
 - oo.estatico.exercicios.Conta
 - oo.jogo.Heroi (sem utilizar mais de uma tabela)
