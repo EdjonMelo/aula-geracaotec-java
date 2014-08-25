@@ -10,14 +10,14 @@ CREATE TABLE autores (
     ultimo_nome VARCHAR(50),
     pais       VARCHAR(50),
     PRIMARY KEY (id)
-) ENGINE=INNODB;
+);
 
 CREATE TABLE editoras (
     id INT AUTO_INCREMENT NOT NULL,
     nome  VARCHAR(100),
     criado_em TIMESTAMP DEFAULT CURRENT_TIMESTAMP(),
     PRIMARY KEY (id)
-) ENGINE=INNODB;
+);
 
 CREATE TABLE livros (
     id          INT AUTO_INCREMENT NOT NULL,
@@ -30,7 +30,7 @@ CREATE TABLE livros (
     isbn VARCHAR(20),
     PRIMARY KEY (id),
     FOREIGN KEY (autor_id) REFERENCES autores(id)
-) ENGINE=INNODB;
+);
 
 # Adicionando FK depois da tabela ter sido criada
 ALTER TABLE livros ADD FOREIGN KEY (editora_id) REFERENCES editoras(id);
@@ -45,7 +45,7 @@ CREATE TABLE bibliotecas (
     nome     VARCHAR(200),
     endereco VARCHAR(200),
     PRIMARY KEY (id)
- ) ENGINE=INNODB;
+ );
  
  CREATE TABLE bibliotecas_livros (
     biblioteca_id INT NOT NULL,
@@ -53,7 +53,7 @@ CREATE TABLE bibliotecas (
     PRIMARY KEY (biblioteca_id, livro_id),
     FOREIGN KEY (biblioteca_id) REFERENCES bibliotecas(id),
     FOREIGN KEY (livro_id) REFERENCES livros(id)
- ) ENGINE=INNODB;
+ );
 
 --==== EXERCÍCIOS ====
 --
@@ -85,23 +85,29 @@ CREATE TABLE bibliotecas (
 --informação relativa às eparações de oficina efectuadas nos veículos dos seus clientes. 
 --
 --O sistema de informação deverá permitir manter um registo histórico de todas as 
---reparações efectuadas. A empresa pretende manter dos clientes a seguinte informação: 
+--reparações efectuadas. 
+
+ -- A empresa pretende manter dos clientes a seguinte informação: 
 --- código de identificação, 
 --- nome, 
---- morada,
+--- endereco,
 --- telefone.
 -- 
 --A empresa pretende também saber os veículos que um dado cliente teve ou tem e as datas
---em que foram adquiridos. Dos funcionários da oficina a empresa pretende manter a seguinte
+--em que foram adquiridos. 
+
+ -- Dos funcionários da oficina a empresa pretende manter a seguinte
 --informação: 
 --- código de identificação, 
 --- nome, 
---- morada, 
+--- endereco, 
 --- telefone,
 --- categoria. 
 --
 --O custo horário de mão de obra depende da categoria do funcionário e é definido através 
---de uma tabela que é atualizada regularmente. A empresa pretende saber para cada reparação: 
+--de uma tabela que é atualizada regularmente. 
+
+--A empresa pretende saber para cada reparação: 
 --- qual o veículo, 
 --- qual o cliente, 
 --- data em que foi efetuada,
