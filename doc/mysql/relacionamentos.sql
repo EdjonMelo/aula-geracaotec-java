@@ -55,63 +55,63 @@ CREATE TABLE bibliotecas (
     FOREIGN KEY (livro_id) REFERENCES livros(id)
  ) ENGINE=INNODB;
 
-# ==== EXERCÍCIOS ====
-
-Pretende-se criar uma base de dados que permita gerir uma parte da 
-informação de uma clinica de saúde.
-
-Fundamentalmente a base de dados deverá guardar a informação relativa aos doentes 
-que frequentam a clínica:
-- nome, 
-- morada,
-- telefone,
-- numero de beneficiário, e dos médicos que lá trabalham:
-- nome,
-- morada, 
-- contacto,
-- especialidade.
- 
-Para além disso o sistema deverá registar as marcações de consultas de cada paciente 
-para um determinado médico sabendo que esse médico só pratica uma determinada 
-especialidade. No entanto, na clinica um paciente pode obviamente consultar diferentes 
-médicos para a mesma ou para diferentes especialidades. 
-
-# -----------------------
-
-Crie e desenvolvova uma base de dados a partir da seguinte 
-descrição do sistema: 
-
-Uma empresa de venda de automóveis retende implementar um sistema para gerir a 
-informação relativa às eparações de oficina efectuadas nos veículos dos seus clientes. 
-
-O sistema de informação deverá permitir manter um registo histórico de todas as 
-reparações efectuadas. A empresa pretende manter dos clientes a seguinte informação: 
-- código de identificação, 
-- nome, 
-- morada,
-- telefone.
- 
-A empresa pretende também saber os veículos que um dado cliente teve ou tem e as datas
-em que foram adquiridos. Dos funcionários da oficina a empresa pretende manter a seguinte
-informação: 
-- código de identificação, 
-- nome, 
-- morada, 
-- telefone,
-- categoria. 
-
-O custo horário de mão de obra depende da categoria do funcionário e é definido através 
-de uma tabela que é atualizada regularmente. A empresa pretende saber para cada reparação: 
-- qual o veículo, 
-- qual o cliente, 
-- data em que foi efetuada,
-- o custo total da reparação.
- 
-A empresa pretende também armazenar para cada reparação as peças que foram utilizadas 
-e o seu preço, bem como o tempo de mão de obra gasto por cada funcionário e o
-respectivo custo. A empresa pretende manter para as peças em armazém a seguinte 
-informação: 
-- código de identificação,
-- designação,
-- custo unitário,
-- quantidade em armazém.
+--==== EXERCÍCIOS ====
+--
+--Pretende-se criar uma base de dados que permita gerir uma parte da 
+--informação de uma clinica de saúde.
+--
+--Fundamentalmente a base de dados deverá guardar a informação relativa aos doentes 
+--que frequentam a clínica:
+--- nome, 
+--- morada,
+--- telefone,
+--- numero de beneficiário, e dos médicos que lá trabalham:
+--- nome,
+--- morada, 
+--- contacto,
+--- especialidade.
+-- 
+--Para além disso o sistema deverá registar as marcações de consultas de cada paciente 
+--para um determinado médico sabendo que esse médico só pratica uma determinada 
+--especialidade. No entanto, na clinica um paciente pode obviamente consultar diferentes 
+--médicos para a mesma ou para diferentes especialidades. 
+--
+-- -----------------------
+--
+--Crie e desenvolvova uma base de dados a partir da seguinte 
+--descrição do sistema: 
+--
+--Uma empresa de venda de automóveis retende implementar um sistema para gerir a 
+--informação relativa às eparações de oficina efectuadas nos veículos dos seus clientes. 
+--
+--O sistema de informação deverá permitir manter um registo histórico de todas as 
+--reparações efectuadas. A empresa pretende manter dos clientes a seguinte informação: 
+--- código de identificação, 
+--- nome, 
+--- morada,
+--- telefone.
+-- 
+--A empresa pretende também saber os veículos que um dado cliente teve ou tem e as datas
+--em que foram adquiridos. Dos funcionários da oficina a empresa pretende manter a seguinte
+--informação: 
+--- código de identificação, 
+--- nome, 
+--- morada, 
+--- telefone,
+--- categoria. 
+--
+--O custo horário de mão de obra depende da categoria do funcionário e é definido através 
+--de uma tabela que é atualizada regularmente. A empresa pretende saber para cada reparação: 
+--- qual o veículo, 
+--- qual o cliente, 
+--- data em que foi efetuada,
+--- o custo total da reparação.
+-- 
+--A empresa pretende também armazenar para cada reparação as peças que foram utilizadas 
+--e o seu preço, bem como o tempo de mão de obra gasto por cada funcionário e o
+--respectivo custo. A empresa pretende manter para as peças em armazém a seguinte 
+--informação: 
+--- código de identificação,
+--- designação,
+--- custo unitário,
+--- quantidade em armazém.
