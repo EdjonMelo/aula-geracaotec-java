@@ -74,18 +74,110 @@ CREATE TABLE bibliotecas (
 --Para além disso o sistema deverá registar as marcações de consultas de cada paciente 
 --para um determinado médico sabendo que esse médico só pratica uma determinada 
 --especialidade. No entanto, na clinica um paciente pode obviamente consultar diferentes 
---médicos para a mesma ou para diferentes especialidades. 
+--médicos para a mesma ou para diferentes especialidades.
+
+ CREATE TABLE pacientes (
+    id INT AUTO_INCREMENT,
+    nome VARCHAR(200),
+    endereco VARCHAR(255),
+    telefone VARCHAR(12),
+    num_beneficio VARCHAR(20),
+    PRIMARY KEY(id)
+ );
+
+ CREATE TABLE medicos (
+    id INT AUTO_INCREMENT,
+    nome VARCHAR(200),
+    endereco VARCHAR(255),
+    telefone VARCHAR(12),
+    especialidade VARCHAR(100),
+    PRIMARY KEY(id)
+ );
+ 
+ DROP TABLE consultas;
+ CREATE TABLE consultas (
+    id INT AUTO_INCREMENT,
+    medico_id INT NOT NULL,
+    paciente_id INT NOT NULL,
+    PRIMARY KEY(id),    
+    FOREIGN KEY (medico_id) REFERENCES medicos(id),
+    FOREIGN KEY (paciente_id) REFERENCES pacientes(id)
+ );
 --
 -- -----------------------
 --
+
+ CREATE TABLE clientes (
+    id INT AUTO_INCREMENT,
+    nome VARCHAR(255),
+    endereco VARCHAR(255),
+    telefone VARCHAR(12),
+    PRIMARY KEY(id)
+ );
+ 
+ CREATE TABLE veiculos (
+    id INT AUTO_INCREMENT,
+    cliente_id INT NOT NULL,
+    aquisicao DATE,
+    PRIMARY KEY(id),
+    FOREIGN KEY (cliente_id) REFERENCES clientes(id)
+ );
+ 
+ CREATE TABLE pecas(
+    id INT AUTO_INCREMENT,
+    designacao VARCHAR(255),
+    custo DECIMAL(10, 3),
+    estoque INT,
+    PRIMARY KEY(id)
+ );
+ 
+ CREATE TABLE funcionarios(
+    id INT AUTO_INCREMENT,
+    nome VARCHAR(255),
+    endereco VARCHAR(255),
+    telefone VARCHAR(12),
+    cateogoria_id INT,
+    PRIMARY KEY(id)
+ );
+ 
+ CREATE TABLE categorias(
+    id INT AUTO_INCREMENT,
+    nome VARCHAR(255),
+    custo_hora DECIMAL(10, 3),
+    PRIMARY KEY(id)
+ );
+ 
+ CREATE TABLE reparos(
+    id INT AUTO_INCREMENT, 
+    veiculo_id INT NOT NULL,
+    efetuado_em DATE,
+    PRIMARY KEY(id),
+    FOREIGN KEY (veiculo_id) REFERENCES veiculos(id)
+ );
+ 
+ CREATE TABLE pecas_reparos(
+    peca_id INT NOT NULL,
+    reparo_id INT NOT NULL,
+    FOREIGN KEY (peca_id) REFERENCES pecas(id),
+    FOREIGN KEY (reparo_id) REFERENCES reparos(id)
+ );
+
+ CREATE TABLE funcionarios_reparos(
+    funcionario_id  INT NOT NULL,
+    reparo_id  INT NOT NULL,
+    tempo_gasto TIME,
+    FOREIGN KEY (funcionario_id) REFERENCES funcionarios(id),
+    FOREIGN KEY (reparo_id) REFERENCES reparos(id)
+ );
+ 
 --Crie e desenvolvova uma base de dados a partir da seguinte 
 --descrição do sistema: 
 --
---Uma empresa de venda de automóveis retende implementar um sistema para gerir a 
---informação relativa às eparações de oficina efectuadas nos veículos dos seus clientes. 
+--Uma empresa de venda de automóveis pretende implementar um sistema para gerir a 
+--informação relativa às reparações da oficina efetuadas nos veículos dos seus clientes. 
 --
 --O sistema de informação deverá permitir manter um registo histórico de todas as 
---reparações efectuadas. 
+--reparações efetuadas. 
 
  -- A empresa pretende manter dos clientes a seguinte informação: 
 --- código de identificação, 
