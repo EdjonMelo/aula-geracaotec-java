@@ -52,10 +52,10 @@ CREATE TABLE bibliotecas (
     FOREIGN KEY (livro_id) REFERENCES livros(id)
  );
 
--- EXERCÍCIO: INSERIR 8 autores, 4 editoras, 20 livros (10 com mais de um autor), 3 duas bibliotecas
--- Faça 30 distribuições de livros dentro das bibliotecas.
+-- EXERCÍCIO: INSERIR 8 autores, 4 editoras, 10 livros (5 com mais de um autor), 3 bibliotecas
+-- Faça 20 distribuições de livros dentro das bibliotecas.
 
- INSERT INTO autores(nome, pais) VALUES("J. R. R. Tolkien", "Africa");
+ INSERT INTO autores(nome, pais) VALUES("J. R. R. Tolkien", "Africa do Sul");
  
  INSERT INTO editoras(nome) VALUES("George Allen & Unwin");
  INSERT INTO editoras(nome) VALUES("Livraria Civilização");
