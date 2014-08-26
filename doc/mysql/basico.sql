@@ -1,39 +1,39 @@
-MySQL: comandos básicos
------------------------
-
-Como conectar ao MySQL
-Conecte-se ao servidor MySQL com o seguinte comando:
-    mysql -h NOME-DO-SERVIDOR -u NOME-DO-USUARIO
-    
-Após dar o comando, o sistema vai pedir a sua senha de usuário.
-Dica: Se você instalou o MySQL no seu próprio PC, pode usar localhost no lugar de 
-NOME-DO-SERVIDOR.
-
-No exemplo, a seguir, veja como se conectar como root:
-    mysql -u root -p
-    
-Se não foi você quem fez a instalação, pode precisar contatar o administrador do banco de 
-dados para saber que valores usar para conectar ao servidor MySQL.
+--MySQL: comandos básicos
+-------------------------
+--
+--Como conectar ao MySQL
+--Conecte-se ao servidor MySQL com o seguinte comando:
+--    mysql -h NOME-DO-SERVIDOR -u NOME-DO-USUARIO
+--    
+--Após dar o comando, o sistema vai pedir a sua senha de usuário.
+--Dica: Se você instalou o MySQL no seu próprio PC, pode usar localhost no lugar de 
+--NOME-DO-SERVIDOR.
+--
+--No exemplo, a seguir, veja como se conectar como root:
+--    mysql -u root -p
+--    
+--Se não foi você quem fez a instalação, pode precisar contatar o administrador do banco de 
+--dados para saber que valores usar para conectar ao servidor MySQL.
 
 -------------------------
 
-Como criar um banco de dados no MySQL
+--Como criar um banco de dados no MySQL
 
     CREATE DATABASE nome-do-banco;
     CREATE DATABASE testes;
 
-Para ver todos os bancos de dados existentes no servidor:
+--Para ver todos os bancos de dados existentes no servidor:
 
     SHOW DATABASES;
 
-Usando um banco de dados existente:
+--Usando um banco de dados existente:
 
     USE nome-do-banco;
     USE testes;
     
 -------------------------
 
-Como criar uma tabela no MySQL
+--Como criar uma tabela no MySQL
     
     USE testes; # Defini a tabela a ser utilizada
     
@@ -45,19 +45,19 @@ Como criar uma tabela no MySQL
       numEmpregados mediumint default NULL,
       PRIMARY KEY (id)) AUTO_INCREMENT=1;
       
-Data Types: https://dev.mysql.com/doc/refman/5.0/en/data-types.html
+--Data Types: https://dev.mysql.com/doc/refman/5.0/en/data-types.html
 
-Ver as tabelas da base de dados
+--Ver as tabelas da base de dados
     
     SHOW tables;
     
-Obter informações da tabela
+--Obter informações da tabela
 
     DESCRIBE clientes;
     
 -------------------------
 
-Inserindo dados na base de dados
+--Inserindo dados na base de dados
 
 INSERT INTO `clientes` (`id`,`nomeEmpresa`,`nomeDiretor`,`numEmpregados`) 
     VALUES (1,"Malesuada Inc.","Johnny Pedd",4847);
@@ -73,7 +73,7 @@ INSERT INTO `clientes` (`nomeDiretor`,`numEmpregados`)
 
 -------------------------
 
-Fazendo consulta em todos os dados
+--Fazendo consulta em todos os dados
 
 SELECT * FROM clientes;
 SELECT nomeEmpresa FROM clientes;
@@ -83,9 +83,9 @@ SELECT id, nomeEmpresa FROM clientes WHERE id<>2;
 SELECT * FROM clientes WHERE nomeDiretor LIKE "A%";
 
 
-=================================================
+-------------------------
 
-Novamente (com extras)
+--Novamente (com extras)
 
 USE testes;
 
@@ -119,17 +119,17 @@ SHOW TABLES;
 # Escreva 20 consultas diferentes utilizando estes livros e autores
 
 
-==========================================================
+-------------------------
 
-Crie tabelas que reflitam as classes (do GeracaoTec-java):
-[tá lá no GIT]
+--Crie tabelas que reflitam as classes (do GeracaoTec-java):
+--[tá lá no GIT]
 
-- oo.Humano
-- oo.estatico.exercicios.Conta
-- oo.jogo.Heroi (sem utilizar mais de uma tabela)
-
-// Criem 5 inserts para cada uma dessas tabelas;
-// Crie 3 selects específicos para cada uma dessas tabelas
+-- oo.Humano
+-- oo.estatico.exercicios.Conta
+-- oo.jogo.Heroi (sem utilizar mais de uma tabela)
+--
+--// Criem 5 inserts para cada uma dessas tabelas;
+--// Crie 3 selects específicos para cada uma dessas tabelas
 
 
 
