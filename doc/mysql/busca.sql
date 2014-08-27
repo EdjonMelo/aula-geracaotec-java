@@ -84,11 +84,9 @@ CREATE TABLE bibliotecas (
 
  SELECT * FROM livros l JOIN bibliotecas b;
  SELECT * FROM livros l JOIN bibliotecas b JOIN bibliotecas_livros bl;
- SELECT * FROM livros l JOIN bibliotecas b JOIN bibliotecas_livros bl 
- 	ON (l.id = bl.livro_id AND b.id = bl.biblioteca_id);
+ SELECT * FROM livros l JOIN bibliotecas b JOIN bibliotecas_livros bl ON (l.id = bl.livro_id AND b.id = bl.biblioteca_id);
  
-	 SELECT * FROM livros l JOIN bibliotecas b JOIN bibliotecas_livros bl 
-	 	ON (l.id = bl.livro_id AND b.id = bl.biblioteca_id)
+	 SELECT * FROM livros l JOIN bibliotecas b JOIN bibliotecas_livros bl ON (l.id = bl.livro_id AND b.id = bl.biblioteca_id)
 	 	WHERE l.titulo = "O Hobbit";
 
  SELECT * FROM autores a, livros l;
@@ -96,7 +94,40 @@ CREATE TABLE bibliotecas (
  SELECT * FROM autores a, livros l, autores_livros al 
  	WHERE a.id = al.livro_id ORDER BY l.titulo;
  	
- SELECT * FROM livros l JOIN bibliotecas b JOIN bibliotecas_livros bl JOIN autores a JOIN autores_livros al ON (l.id = bl.livro_id AND b.id = bl.biblioteca_id AND a.id = al.livro_id)  WHERE a.nome = "J. R. R. Tolkien" AND b.nome = "Biblioteca Pública de Florianópolis";
+ SELECT b.nome as "Biblioteca", l.titulo as "Livro", a.nome as "Autor", l.ano_publicacao as "Publicacao" 
+   FROM livros l JOIN bibliotecas b 
+   JOIN bibliotecas_livros bl 
+   JOIN autores a 
+   JOIN autores_livros al 
+   ON (l.id = bl.livro_id 
+     AND b.id = bl.biblioteca_id 
+     AND a.id = al.livro_id) 
+   WHERE a.nome = "J. R. R. Tolkien" 
+     AND b.nome = "Biblioteca Pública de Florianópolis";
 -- EXERCÍCIO: CRIE 15 CONSULTAS interelacionando os dados que foram criados, criando 
 -- comentários sobre o que cada uma está fazendo ou procurando. (enviar por email, 
 -- junto com as inserções!)
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     

@@ -105,9 +105,52 @@ CREATE TABLE bibliotecas (
  );
 --
 -- -----------------------
+ 
+--Crie e desenvolvova uma base de dados a partir da seguinte 
+--descrição do sistema: 
 --
+--Uma empresa de venda de automóveis pretende implementar um sistema para gerir a 
+--informação relativa às reparações da oficina efetuadas nos veículos dos seus clientes. 
+--
+--O sistema de informação deverá permitir manter um registo histórico de todas as 
+--reparações efetuadas. 
 
- CREATE TABLE clientes (
+ -- A empresa pretende manter dos clientes a seguinte informação: 
+--- código de identificação, 
+--- nome, 
+--- endereco,
+--- telefone.
+-- 
+--A empresa pretende também saber os veículos que um dado cliente teve ou tem e as datas
+--em que foram adquiridos. 
+
+ -- Dos funcionários da oficina a empresa pretende manter a seguinte
+--informação: 
+--- código de identificação, 
+--- nome, 
+--- endereco, 
+--- telefone,
+--- categoria. 
+--
+--O custo horário de mão de obra depende da categoria do funcionário e é definido através 
+--de uma tabela que é atualizada regularmente. 
+
+--A empresa pretende saber para cada reparação: 
+--- qual o veículo, 
+--- qual o cliente, 
+--- data em que foi efetuada,
+--- o custo total da reparação.
+-- 
+--A empresa pretende também armazenar para cada reparação as peças que foram utilizadas 
+--e o seu preço, bem como o tempo de mão de obra gasto por cada funcionário e o
+--respectivo custo. A empresa pretende manter para as peças em armazém a seguinte 
+--informação: 
+--- código de identificação,
+--- designação,
+--- custo unitário,
+--- quantidade em armazém.
+ 
+  CREATE TABLE clientes (
     id INT AUTO_INCREMENT,
     nome VARCHAR(255),
     endereco VARCHAR(255),
@@ -169,47 +212,3 @@ CREATE TABLE bibliotecas (
     FOREIGN KEY (funcionario_id) REFERENCES funcionarios(id),
     FOREIGN KEY (reparo_id) REFERENCES reparos(id)
  );
- 
---Crie e desenvolvova uma base de dados a partir da seguinte 
---descrição do sistema: 
---
---Uma empresa de venda de automóveis pretende implementar um sistema para gerir a 
---informação relativa às reparações da oficina efetuadas nos veículos dos seus clientes. 
---
---O sistema de informação deverá permitir manter um registo histórico de todas as 
---reparações efetuadas. 
-
- -- A empresa pretende manter dos clientes a seguinte informação: 
---- código de identificação, 
---- nome, 
---- endereco,
---- telefone.
--- 
---A empresa pretende também saber os veículos que um dado cliente teve ou tem e as datas
---em que foram adquiridos. 
-
- -- Dos funcionários da oficina a empresa pretende manter a seguinte
---informação: 
---- código de identificação, 
---- nome, 
---- endereco, 
---- telefone,
---- categoria. 
---
---O custo horário de mão de obra depende da categoria do funcionário e é definido através 
---de uma tabela que é atualizada regularmente. 
-
---A empresa pretende saber para cada reparação: 
---- qual o veículo, 
---- qual o cliente, 
---- data em que foi efetuada,
---- o custo total da reparação.
--- 
---A empresa pretende também armazenar para cada reparação as peças que foram utilizadas 
---e o seu preço, bem como o tempo de mão de obra gasto por cada funcionário e o
---respectivo custo. A empresa pretende manter para as peças em armazém a seguinte 
---informação: 
---- código de identificação,
---- designação,
---- custo unitário,
---- quantidade em armazém.

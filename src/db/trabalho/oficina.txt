@@ -1,0 +1,8 @@
+A partir do exercício já corrigido da oficina (doc/mysql/relacionamentos.sql),
+crie uma classe java para cada uma das tabelas que tenha a capacidade de:
+
+- Criar e se utilizar de uma conexão com base de dados;
+- Consigam inserir os dados relativos a tabela em específico;
+- Consigam imprimir na tela todos os dados relativos aquela tabela;
+
+Cada capacidade deve feita utilizando métodos separados (como a db.InsercaoDeDados.java).
