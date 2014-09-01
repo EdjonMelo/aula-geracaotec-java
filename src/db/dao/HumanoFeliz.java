@@ -5,7 +5,11 @@ import java.util.List;
 
 // execute no console da base doc/mysql/humano.sql antes de começar a executar.
 public class HumanoFeliz {
+	
+	private static HumanoDAOMySQL humanoDao;
+	
 	public static void main(String[] args) throws SQLException {
+		humanoDao = new HumanoDAOMySQL();
 //		insertData();
 //		retrieveData();
 		deleteData();
@@ -13,7 +17,6 @@ public class HumanoFeliz {
 	
 	public static void retrieveData() throws SQLException {
 		List<Humano> lh;
-		HumanoDAOMySQL humanoDao = new HumanoDAOMySQL();
 		
 		System.out.println("List:");
 		lh = humanoDao.list();
@@ -36,7 +39,6 @@ public class HumanoFeliz {
 	
 	public static void deleteData() throws SQLException {
 		List<Humano> lh;
-		HumanoDAOMySQL humanoDao = new HumanoDAOMySQL();
 		
 		lh = humanoDao.list();
 		for(Humano h : lh) {
@@ -45,11 +47,10 @@ public class HumanoFeliz {
 	}
 	
 	public static void insertData() throws SQLException {
-		HumanoDAOMySQL humanoDao = new HumanoDAOMySQL();
 		Humano nassor = new Humano("Nassor", 110.5, 1.9, false);
 		humanoDao.save(nassor); // insert
 		
-		nassor.setId(1);
+		nassor.setId(1); //forçado d+!!!
 		nassor.setNome("Nassor Paulino da Silva");
 		humanoDao.save(nassor); // update
 		
@@ -58,3 +59,17 @@ public class HumanoFeliz {
 		humanoDao.save(new Humano("Beltrano", 80.5, 1.83, true));
 	}
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+

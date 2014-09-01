@@ -1,0 +1,2 @@
+Com base na aula de DAO crie a iteração com a base de dados com a classe 
+oo.estatico.exercicios.Conta.  

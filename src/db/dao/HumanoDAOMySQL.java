@@ -7,9 +7,6 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
-/*
- * 
- */
 public class HumanoDAOMySQL extends MySQL implements HumanoDAO {
 
 	public HumanoDAOMySQL() throws SQLException {
@@ -78,6 +75,22 @@ public class HumanoDAOMySQL extends MySQL implements HumanoDAO {
 		return lh;
 	}
 	
+	public List<Humano> search(String str, int inicio, int limite) throws SQLException {
+		String selectSQL = "SELECT * FROM humanos WHERE nome LIKE ? LIMIT ?, ? ORDER BY nome";
+		// O PreparedStatement permite inserir parametros nas consultas SQL.
+		PreparedStatement preparedStatement = con.prepareStatement(selectSQL);
+		preparedStatement.setString(1, "%"+str+"%");
+		preparedStatement.setInt(2, inicio);
+		preparedStatement.setInt(3, limite);
+		ResultSet rs = preparedStatement.executeQuery();
+		
+		List<Humano> lh = new ArrayList<>();
+		while(rs.next()) {
+			lh.add(populateHumano(rs));
+		}
+		return lh;
+	}
+	
 	public Humano find(int id) throws SQLException {
 		String selectSQL = "SELECT * FROM humanos WHERE id = ?";
 		// O PreparedStatement permite inserir parametros nas consultas SQL.
@@ -86,9 +99,9 @@ public class HumanoDAOMySQL extends MySQL implements HumanoDAO {
 		ResultSet rs = preparedStatement.executeQuery();
 		
 		if(rs.next()) {
-			Humano h = populateHumano(rs);
-			return h;
+			return populateHumano(rs);
 		}
+		
 		return null;
 	}
 	
@@ -98,8 +111,30 @@ public class HumanoDAOMySQL extends MySQL implements HumanoDAO {
 		h.setNome(rs.getString("nome"));
 		h.setPeso(rs.getDouble("peso"));
 		h.setAltura(rs.getDouble("altura"));
+		h.setMorto(rs.getBoolean("morto"));
 		h.setNascimento(rs.getDate("nascimento"));
 		return h;
 	}
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
