@@ -6,3 +6,4 @@ crie uma classe java para cada uma das tabelas que tenha a capacidade de:
 - Consigam imprimir na tela todos os dados relativos aquela tabela;
 
 Cada capacidade deve feita utilizando métodos separados (como a db.InsercaoDeDados.java).
+E cada tabela precisa ser feita em uma Classe seperada.
