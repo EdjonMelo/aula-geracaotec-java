@@ -16,7 +16,7 @@ SHOW INDEXES FROM livros;
 -- Criando um índice
 CREATE INDEX <nome_indice> ON <nome_tabela> (<coluna>);
 -- Exemplo
-CREATE INDEX idx_autores_nome ON autores (nome);
+CREATE INDEX nome ON autores (nome);
 SHOW INDEXES FROM autores;
 
 -- Criando índices durante a criação da tabela
@@ -39,3 +39,19 @@ SHOW INDEXES FROM leitores;
 -- ou estangeira. 
 
 ----------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
