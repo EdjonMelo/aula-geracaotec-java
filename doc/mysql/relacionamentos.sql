@@ -179,8 +179,9 @@ CREATE TABLE bibliotecas (
     nome VARCHAR(255),
     endereco VARCHAR(255),
     telefone VARCHAR(12),
-    cateogoria_id INT,
-    PRIMARY KEY(id)
+    categoria_id INT,
+    PRIMARY KEY(id),
+    FOREIGN KEY (categoria_id) REFERENCES categorias(id)
  );
  
  CREATE TABLE categorias(

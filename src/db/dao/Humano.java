@@ -17,7 +17,7 @@ public class Humano {
 		setPeso(peso);
 		setAltura(altura);
 		setMorto(morto);
-		setNascimento(new Date());
+//		setNascimento(new Date());
 	}
 	
 	public String toString() {
