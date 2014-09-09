@@ -5,6 +5,7 @@ public class MontanhaRussa {
 	private float velocidadeMaxima;
 	private float velocidadeAtual;
 	private float comprimento;
+	private float posicaoAtual;
 	private int loopings;
 	
 	public boolean recebePassageiros(int lugaresAOcupar) {
@@ -16,7 +17,7 @@ public class MontanhaRussa {
 		}
 	}
 	
-	public void movimenta(float velocidade) {
+	public void acelera(float velocidade) {
 		if(velocidade > this.velocidadeMaxima) {
 			this.velocidadeAtual = this.velocidadeMaxima;
 		} else if (velocidade < 0) {
@@ -26,6 +27,23 @@ public class MontanhaRussa {
 		}		
 	}
 	
+	public float getPosicaoAtual() {
+		return posicaoAtual;
+	}
+
+	public void setPosicaoAtual(float posicaoAtual) {
+		if(posicaoAtual >= this.getComprimento()) {
+			this.posicaoAtual = 0;
+		} else {
+			this.posicaoAtual = posicaoAtual;
+		}
+		
+	}
+
+	public void setVelocidadeAtual(float velocidadeAtual) {
+		this.velocidadeAtual = velocidadeAtual;
+	}
+
 	public float getVelocidadeAtual() {
 		return this.velocidadeAtual;
 	}
