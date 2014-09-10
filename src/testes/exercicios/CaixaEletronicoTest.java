@@ -62,19 +62,14 @@ public class CaixaEletronicoTest {
 		}
 	}
 	
-//	@Test(expected = Exception.class)
-//	public void saqueNotaDeUm() {
-//		for(int j = 1; j < 1000; j+= 1) {
-//			if(j % 10 > 0) {
-//				try {
-//					int[] resultado = caixa.saque(j);
-//				} catch (Exception e) {
-//					// TODO Auto-generated catch block
-//					e.printStackTrace();
-//				}
-//			}
-//		}
-//	}
+	@Test(expected = Exception.class)
+	public void saqueNotaDeUm() throws Exception {
+		for(int j = 1; j < 1000; j+= 1) {
+			if(j % 10 > 0) {
+				int[] resultado = caixa.saque(j);
+			}
+		}
+	}
 }
 
 
