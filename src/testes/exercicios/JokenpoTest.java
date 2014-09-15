@@ -39,7 +39,6 @@ public class JokenpoTest {
 	public void erroEu() throws Exception {
 		Jokenpo.jogar("cogumelo", "papel");
 	}
-
 }
 
 
