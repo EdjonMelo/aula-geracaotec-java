@@ -6,5 +6,5 @@ Exercício: Criar um programa que diga quando a resposta da pergunta "o que é q
 
 Exercício: Digitar 6 números e dizer quantos números são pares e quantos são ímpares.
 
-Crie um programa que permita você escolher um numero, faça um sorteio de um numero e diga se o numero escolhido é o mesmo sorteado, retorne uma mensagem se acertar dizendo que acertou, e outra se errar dizendo que errou.
+Exercício: Crie um programa que permita você escolher um numero, faça um sorteio de um numero e diga se o numero escolhido é o mesmo sorteado, retorne uma mensagem se acertar dizendo que acertou, e outra se errar dizendo que errou.
 
