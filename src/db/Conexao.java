@@ -31,6 +31,12 @@ public class Conexao {
 				"jdbc:mysql://localhost:3306/testes", "root", "");
 		return con;
 	}
+	
+	public static Connection criarConexao(String banco) throws SQLException {
+		Connection con = DriverManager.getConnection(
+				"jdbc:mysql://localhost:3306/" + banco, "root", "");
+		return con;
+	}
 }
 
 
