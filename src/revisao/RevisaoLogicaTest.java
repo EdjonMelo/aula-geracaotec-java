@@ -5,7 +5,7 @@ import static org.junit.Assert.*;
 import org.junit.Test;
 
 public class RevisaoLogicaTest {
-	private static final double DELTA = 0.055;
+	private static final double DELTA = 0.1;
 
 	/*
 	 * Crie o método "potencia" que receba um número do tipo inteiro
