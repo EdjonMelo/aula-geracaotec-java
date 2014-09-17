@@ -16,7 +16,7 @@ public class RevisaoLogicaTest {
 		assertEquals(8, RevisaoLogica.potencia(2));
 		assertEquals(27, RevisaoLogica.potencia(3));
 		assertEquals(6859, RevisaoLogica.potencia(19));
-		assertEquals(1000000, RevisaoLogica.potencia(19));
+		assertEquals(1000000, RevisaoLogica.potencia(100));
 	}
 	
 	/*
