@@ -1,0 +1,84 @@
+Não fazer uma graduação não significa que você não precisa estudar o mesmo que uma tem que oferecer:
+
+Análise e Complexidade de Algoritmos
+Arquitetura de Computadores
+Banco de Dados
+Circuitos Digitais
+Classificação e Pesquisa
+Compiladores
+Computação Gráfica
+Construção de Algoritmos
+Direito e Legislação
+Eletricidade e Eletrônica
+Engenharia de Software e Análise de Projeto de Sistemas
+Estrutura de Dados
+Gerência de Projeto e Qualidade de Software
+Inteligência Artificial
+Introdução à Organização de Computadores
+Linguagens Formais e Autômatos
+Lógica Matemática
+Matemática Aplicada
+Paradigmas de Linguagem de Programação
+Probabilidade e Estatística
+Programação Concorrente
+Programação Estruturada
+Programação Orientada a Objetos
+Redes de Computadores
+Sistemas Distribuídos
+Sistemas e Aplicações Multimídia
+Sistemas Microprogramados
+Sistemas Operacionais
+Teoria da Computação
+...
+
+E tem muito mais do que isso. Sim, o que nós vimos é praticamente nada!
+
+E viva a internet... tem tudo nela, tudo mesmo, mais do que um professor pode lhe lecionar.
+
+-----------------------------------
+
+O que não vimos em Java:
+
+- Generics
+	-> http://www.devmedia.com.br/usando-generics-em-java/28981
+	-> http://www.tiexpert.net/programacao/java/generics.php
+	-> http://blog.caelum.com.br/generics-inferencia-de-tipos-e-reificacao-no-java-7/
+- Annotations
+	-> http://www.tiexpert.net/programacao/java/annotations.php
+	-> http://www.franciscosouza.com.br/2009/11/05/trabalhando-com-annotations-em-java/
+- Todas as outras estrutura de dados (só vimos Array e ArrayList)
+	-> http://www.caelum.com.br/apostila-java-estrutura-dados/
+- Threads
+	-> http://www.caelum.com.br/apostila-java-orientacao-objetos/programacao-concorrente-e-threads/
+- Enum
+	-> http://www.devmedia.com.br/tipos-enum-no-java/25729
+
++ uma infinidade de coisas
+
+-----------------------------------
+
+O que não vimos em SQL:
+
+- Procedures / Functions
+	-> http://www.devmedia.com.br/procedures-e-funcoes-no-mysql/2550
+	-> http://www.devmedia.com.br/stored-procedures-no-mysql/29030
+	-> http://www.devmedia.com.br/artigo-sql-magazine-64-utilizando-stored-functions-no-mysql/12675
+- Triggrers
+	-> http://www.linhadecodigo.com.br/artigo/3567/mysql-basico-triggers.aspx
+	-> https://www.youtube.com/watch?v=JOnkvqUaNOU
+- PL/SQL
+	-> http://www.devmedia.com.br/conhecendo-o-pl-sql/24763
+	-> http://blog.gaudencio.net.br/2013/02/plmysql-serie-de-posts-1-conceitos.html
+	
++ tipos diferentes de índices, formas diferentes de realizar consultas (select), formas complexas de consultas (select)
+	-> http://sql.learncodethehardway.org/
+
+-----------------------------------
+
+Aprendam a maior quantidade possível de linguagens/técnicas de programação, tentem fugir da zona de conforto sempre:
+	-> http://www.wikihow.com/Learn-a-Programming-Language
+	-> http://programming-motherfucker.com/become.html
+
+-----------------------------------
+
+Dêem um jeito no inglês dando ler e escutar como preferencia inicial.
